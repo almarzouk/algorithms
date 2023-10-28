@@ -42,9 +42,20 @@ class HashTable {
     }
     return undefined;
   }
+  keys() {
+    const keysArray = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        keysArray.push(this.data[i][0][0]);
+      }
+    }
+    console.log(keysArray);
+    return keysArray;
+  }
 }
 
 const myHashTable = new HashTable(50);
 myHashTable.set("Jumaa", 0);
 myHashTable.set("jma", 1);
-myHashTable.get("Jumaa");
+myHashTable.set("lose", 12);
+myHashTable.keys();
